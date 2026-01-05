@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Advance2</title>
+    <style>
+        .layout{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 80px;
+        }
+        .box{
+            background-color: blue;
+            text-align: center;
+            padding: 40px;
+            font-weight: bolder;
+        }
+        @media(max-width:900px){
+            .layout{
+                background-color: brown;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+                
+            }
+        }
+        @media(max-width:600px){
+            .layout{
+                background-color: palevioletred;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="box">Box1</div>
+        <div class="box">BOX2</div>
+        <div class="box">BOX3</div>
+        <div class="box">BOX4</div>
+        <div class="box">BOX5</div>
+        <div class="box">BOX6</div>
+    </div>
+</body>
+</html>

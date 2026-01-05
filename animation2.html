@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation-2</title>
+    <style>
+      .hov{
+        border: none;
+        height: 30px;
+        font-weight: bolder;
+        font-size: large;
+        cursor: pointer;
+        background-color: blue;
+        color: black;
+        margin: 50px;
+        transition: 1.2s;
+         }
+         .hov:hover{
+            background-color: lightgreen;
+            transform: scale(1.5);
+         }
+         @media(max-width:700px){
+            .hov:hover{transform: none;}
+         }
+         .card{
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+           margin: 40px auto;
+            font-weight: bolder;
+            
+
+            transition: 0.5s;
+         }
+         .card:hover{
+            transform: translateY(-20px);
+            box-shadow:0px 10px 20px gray;
+         }
+         .zoom{
+            width: 280px;
+            transition: 1.5s;
+            border: 3px solid brown;
+            margin:40px auto;
+            display: block;
+            
+         }
+         .zoom:hover{
+            transform: scale(1.2);
+         }
+         .span{
+            border: 6px solid brown;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            margin: 40px auto;
+            border-top: 6px solid blue;
+            animation: spa 2s infinite linear;
+         }
+         @keyframes spa{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+         }
+         @media (max-width: 500px) {
+              .span {
+                animation-duration: 2s;   /* faster */
+                background: blue;
+                width: 70px;              /* smaller */
+                height: 70px;
+               }
+            }
+         .text{
+           
+            opacity: 0;
+            animation:te 2s forwards ;
+         }
+         @keyframes te{
+            to{opacity: 1;}
+         }
+         
+    </style>
+</head>
+<body>
+    <button class="hov">Click Me</button>
+    <div class="card">MY CARD</div>
+    <img src="dharana.jpg" alt="dharana" class="zoom">
+    <div class="span"></div>
+    <div class="text">
+      <p>Hello How Are You</p>
+    </div>
+</body>
+</html>

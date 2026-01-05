@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6(Form)</title>
+    <style>
+        button:hover{
+            background-color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Register Form</h1>
+    <form>
+        <label><strong>Name:</strong></label><br>
+         <input type="text" placeholder="Enter your full name" required maxlength="20"><br><br>
+         
+         <!--maxlength will not work for type=number so we have to put type=text to make it work-->
+         <label><b>Phone Number:</b></label><br>
+         <input type="number" placeholder="1234567890" maxlength="10"><br><br>
+
+         <label><b>Email:</b></label><br>
+         <input type="email" placeholder="email@gmail.com"><br><br>
+
+         <label><b>Password:</b></label><br>
+         <input type="password" required><br><br>
+
+         <label><b>Message:</b></bMessage:></label><br>
+         <textarea placeholder="Write a message"></textarea><br><br>
+
+        <button>Register</button>
+    </form>
+</body>
+</html>
